@@ -11,6 +11,36 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+ // const titleCased = (tutorials.split(),  ) => {
+ //   return tutorials
+ // }
+
+//map twice break up into individual sentences and then second time into individual words
+
+/*How can we "iterate" through individual words in a string?
+Can we execute an interation inside an iteration? How?
+How can we capitalize just the first letter in a word?*/
+
+
+// const titleCased = function(array) {
+//   const newString = array.map((str) =>
+//     str
+//       .split(" ")
+//       .map((word) => word[0].toUpperCase() + word.slice(1))
+//       .join(" ")
+//   );
+//   return newString;
+// };
+
+function titledCaser(str) {
+  const newString = str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ")
+;
+  return newString;
+}
+
+function titleCased() {
+  return tutorials.map(titledCaser)
 }
